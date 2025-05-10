@@ -1,0 +1,100 @@
+.layout {
+    width: 100%;
+    display: grid;
+    grid: "header header header" "leftSide body body" "leftSide footer footer";
+    gap: 10px;
+}
+
+.header,
+.footer,
+.leftSide {
+    background: #1b1c1d;
+    color: #dee0f3;
+}
+
+.mermaid {
+    width: 80vw;
+    max-width: 50em;
+}
+
+.header {
+    height: 65px;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    grid-area: header;
+    h2 {
+        margin: 0px 10%;
+    }
+}
+
+.tab {
+    button {
+        margin: 5px 0px;
+    }
+    display: grid;
+    line-height: 1em;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.leftSide {
+    width: 10%;
+    position: fixed;
+    height: 100%;
+    grid-area: leftSide;
+    text-align: left;
+    line-height: 40px;
+    top: 65px;
+    list-style-type: none;
+}
+
+.body {
+    background-image: url("./img/30_4.jpg");
+    overflow-y: scroll;
+    position: absolute;
+    width: 85%;
+    margin: 5% 12%;
+    height: 85%;
+    grid-area: body;
+}
+
+.footer {
+    position: fixed;
+    grid-area: footer;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+html {
+    background: #212325;
+}
+
+.content {
+    margin: 7% 7%;
+}
+
+.mermaid {
+    width: 80vw;
+    max-width: 50em;
+}
+
+.tabcontent {
+    animation: fadeEffect 1.5s;
+    height: 100%;
+    /* Fading effect takes 1 second */
+}
+
+
+/* Go from zero to full opacity */
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
