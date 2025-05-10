@@ -10,6 +10,7 @@ function actions(evt, contentName) {
         tabcontent[i].style.opacity = "0";
         tabcontent[i].style.left = "-9000px";
         tabcontent[i].style.transform = "scale(0)";
+        tabcontent[i].style.animation = "fadeEffect 1.5s";
     }
 
     tablinks = document.getElementsByClassName("tablinks");
@@ -19,11 +20,13 @@ function actions(evt, contentName) {
     }
 
     document.getElementById(contentName).style.position = "unset";
-    document.getElementById(contentName).style.opacity = "1";
+    document.getElementById(contentName).style = "1";
     document.getElementById(contentName).style.left = "9000px";
     document.getElementById(contentName).style.transform = "scale(1)";
-
+    document.getElementById(contentName).style.animation = "fadeEffect 1.5s";
+    fadeIn(contentName, 200)
     evt.currentTarget.className += " active";
+
 }
 
 // JQuery
@@ -40,8 +43,13 @@ window.onload = function() {
 
 }
 
-// function actions(evt, contentName) {
-//     $("[id]").visibility("hidden");
+function fadeIn(id, speed) {
+    el = document.getElementById(id)
+    var step = 1 / speed;
+    var interval = setInterval(function() {
+        if (+el.style.opacity >= 1)
+            clearInterval(interval);
 
-//     $(`#${contentName}`).show()
-// }
+        el.style.opacity = +el.style.opacity + step;
+    }, speed / 1000);
+}
