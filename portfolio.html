@@ -41,12 +41,21 @@
 
         <!-- BODY -->
         <div class="body" class="zc-body">
+            <div id="kotiin" class="tabcontent ">
+                <div class="content text_shadow">
+                    <h1>Kotisivu </h3>
+                        <p>Tervetuloa portfolioni!</p>
+                </div>
+
+            </div>
+
             <div id="koulutus" class="tabcontent">
                 <pre class="mermaid">
                     timeline
-                        title  Minulla on
+                        title  Minulla on kokea
                         2004 : toisen asteen koulutus 
                         2009 : keskeneräinen korkeakoulututkinto
+                    
                 </pre>
             </div>
 
@@ -55,19 +64,6 @@
                     <pre class="mermaid ">
                         mindmap
                         root((Kokea))
-                            %%{
-                                init: {
-                                'theme': 'dark',
-                                'themeVariables': {
-                                        'primaryColor': '#BB2528',
-                                        'primaryTextColor': '#fff',
-                                        'primaryBorderColor': '#7C0000',
-                                        'lineColor': '#F8B229',
-                                        'secondaryColor': '#006100',
-                                        'tertiaryColor': '#fff'
-                                    }
-                                }
-                            }%%
                             Olen ollut mukana ohjelmistojen testauksessa <br> ja kehityksessä yli 10 vuotta.
                             Työskenteli useiden testauskehysten sekä toimitus- ja käyttöönottojärjestelmien kanssa.
                                 
@@ -107,58 +103,73 @@
             <div id="teen" class="tabcontent ">
                 <div class="content ">
                     <pre class="mermaid">
+                        timeline
+                            title MInulla on kokea
+                                2009 - 2019 : Työssä QA
+                                2019 - 2023 : Työssä QA ja Development
+                                2023 - ??? : Työssä Farmissa
                     </pre>
-                    <h4>Minä nyt teen</h4>
-                    <p>Tällä hetkellä asun ja työskentelen Rymätulyässä maatilalla, opiskelen ja teen remontteja talossani.</p>
+
                 </div>
             </div>
 
             <div id="osaaminen" class="tabcontent ">
                 <pre class="mermaid ">
                     mindmap
-                    root((Kokea))
-                        %%{
-                            init: {
-                            'theme': 'dark',
-                            'themeVariables': {
-                                    'primaryColor': '#BB2528',
-                                    'primaryTextColor': '#fff',
-                                    'primaryBorderColor': '#7C0000',
-                                    'lineColor': '#F8B229',
-                                    'secondaryColor': '#006100',
-                                    'tertiaryColor': '#fff'
-                                }
-                            }
-                        }%%
-                        Osaaminen
-                            Taidoista
-                                vastuullisuus
-                                tarkkaavaisuus
-                                
-                            Vahvuudet
-                                ahkera
-                                tiimipelaaja sekä omistautuminen
-                                oppija
-                                pragmaattinen ajattelu
-                                    
+                    root((Osaaminen))
+                        Henkilökohtaiset ominaisuudet
+                            Ratkaiseva
+                            Seurallinen
+                            Stressinsietokyky.
+                            tarkkaavainen
+                            Vastuullinen
+                            ahkera
+                    
+                        Tietoja taidoista
+                            Kyky analysoida ja ajatella loogisesti
+                            Käytännön
+                            Itsenäinen esiintyjä
+                            pragmaattinen ajattelu
+                            joukkuepelaaja
+                            omistautuminen asialle
+                        
+                        Vahvuudet
+                            matala kynnys hankkeeseen osallistumiseen
+                            Jatkuvasti halukas oppimaan uutta ja parantamaan osaamistaan        
                             
                 
             </div>
 
             <div id="minusta" class="tabcontent ">
                 <div class="content ">
-                    <h4>Minusta</h4>
-                    <p>Hei, olen Sergei Kievskiy. Olen 37-vuotias. Olen ukrainalainen. Työskentelen ja asun tällä hetkellä Suomessa.</p>
-                </div>
-            </div>
+                    <div >
+                        <img class="foto" id="foto" src="./assets/img/my_foto.jpg"> Click
 
-            <div id="kotiin" class="tabcontent ">
-                <div class="content text_shadow">
-                    <h1>Kotisivu </h3>
-                        <p>Tervetuloa portfolioni!</p>
-                </div>
-
+                        <p>Hei, nimeni on Sergei Kyivskyi. Olen 37-vuotias. Olen ukrainalainen.</p> 
+                        <p>Työskentelen ja asun tällä hetkellä Suomessa.</p>
+                        <p>Nykyään työskentelen perheeni kanssa maatilalla. </p>
+                        <p>Ennen Suomeen muuttoani olin paljon mukana ohjelmistojen testauksessa ja kehityksessä. Minulla on oma henkilökohtainen Github. </p>
+                        <p>Voit katsoa sen linkistä <a href="https://github.com/Benedicttt" target="_blank">Github</a></p>
+                        <p>Loin myös sivuston aloitteleville testaajille <a href="https://blog-s-kievskiy.herokuapp.com/en/1" target="_blank">Blog for QA</a></p>
+                        <p>ja verkkosivusto työntekijöiden työtuntien seurantaan <a href="https://my-worklist.herokuapp.com" target="_blank">WOrk List</a></p>
+                        <p>Kuten ymmärrät, tykkään tehdä kaikkea. Olen yhtä lailla kiinnostunut uusista teknologioista ja työskentelystä kotonani luonnossa.</p>
+                        <p>Harrastuksistani voin nostaa esiin puutuotteiden luomisen ja valokuvauksen. Teen mielelläni yhteistyötä kanssanne.</p>
             </div>
+        </div>
+        <div>
+
+            <script>
+                $(document).ready(function() {
+                    $(".foto").click(function() {
+                        this.requestFullscreen({ navigationUI: "show" })
+                    })
+                });
+            </script>
+        </div>
+        </div>
+        </div>
+
+
         </div>
 
         <!-- FOOTER -->

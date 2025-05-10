@@ -24,6 +24,8 @@ function actions(evt, contentName) {
     document.getElementById(contentName).style.left = "9000px";
     document.getElementById(contentName).style.transform = "scale(1)";
     document.getElementById(contentName).style.animation = "fadeEffect 1.5s";
+    contentName == "minusta" ? document.getElementById(contentName).style.backdropFilter = "blur(20px)" : document.getElementById(contentName).style.backdropFilter = "blur(0px)";
+
     fadeIn(contentName, 200)
     evt.currentTarget.className += " active";
 
@@ -41,8 +43,13 @@ window.onload = function() {
 
     actions(event, 'kotiin')
 
+    $("#foto").click("click", function() {
+        document
+            .exitFullscreen()
+    })
 }
 
+//for animation open to new tab
 function fadeIn(id, speed) {
     el = document.getElementById(id)
     var step = 1 / speed;
@@ -53,3 +60,5 @@ function fadeIn(id, speed) {
         el.style.opacity = +el.style.opacity + step;
     }, speed / 1000);
 }
+
+// for foto exit
