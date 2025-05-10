@@ -29,12 +29,12 @@
         <!-- SIDE BAR -->
         <div class="leftSide">
             <div class="tab">
-                <button class="tablinks btn btn-dark" onclick="actions(event, 'minusta')">Minusta</button>
-                <button class="tablinks btn btn-dark" onclick="actions(event, 'koulutus')">Koulutus</button>
-                <button class="tablinks btn btn-dark" onclick="actions(event, 'kokea')">Kokea</button>
-                <button class="tablinks btn btn-dark" onclick="actions(event, 'teen')">Minä nyt teen</button>
-                <button class="tablinks btn btn-dark" onclick="actions(event, 'osaaminen')">Osaaminen</button>
-                <button class="tablinks btn btn-dark" onclick="actions(event, 'kotiin')">Kotisivu</button>
+                <button class="tablinks btn btn-dark" onclick="actions(event, 'minusta'), scrollToUp()">Minusta</button>
+                <button class="tablinks btn btn-dark" onclick="actions(event, 'koulutus'), scrollToUp()">Koulutus</button>
+                <button class="tablinks btn btn-dark" onclick="actions(event, 'kokea'), scrollToUp()">Kokea</button>
+                <button class="tablinks btn btn-dark" onclick="actions(event, 'teen'), scrollToUp()">Minä nyt teen</button>
+                <button class="tablinks btn btn-dark" onclick="actions(event, 'osaaminen'), scrollToUp()">Osaaminen</button>
+                <button class="tablinks btn btn-dark" onclick="actions(event, 'kotiin'), scrollToUp()">Kotisivu</button>
                 <button class="tablinks btn btn-dark" onclick="actions(event, 'api'), getData(), dataGithub()">Api Github</button>
 
             </div>
@@ -150,10 +150,11 @@
             </div>
 
             <div id="minusta" class="tabcontent text_shadow ">
+                
                 <div class="content fz-20">
                     <div >
                         <img class="foto" id="foto" src="./assets/img/my_foto.jpg"> Click
-
+                            
                         <p>Hei, nimeni on Sergei Kyivskyi. Olen 37-vuotias. Olen ukrainalainen.</p> 
                         <p>Työskentelen ja asun tällä hetkellä Suomessa.</p>
                         <p>Nykyään työskentelen perheeni kanssa maatilalla. </p>

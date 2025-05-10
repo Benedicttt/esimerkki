@@ -62,4 +62,6 @@ function fadeIn(id, speed) {
     }, speed / 1000);
 }
 
-// for foto exit
+function scrollToUp() {
+    document.getElementById('minusta').scrollIntoView();
+}
