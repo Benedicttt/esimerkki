@@ -1,5 +1,6 @@
-// https://github.com/mermaid-js/mermaid/issues/5676 BUGS for display:none parametrs
+// https://github.com/mermaid-js/mermaid/issues/5676 BUGS for display:none parametrs !!!!!!!!!!!!!!!!
 //  DONT USE BEACAUSE display:none dont worked
+
 
 // Native
 function actions(evt, contentName) {
